@@ -31,6 +31,7 @@ var ST = {
 };
 var q = [], tk = ST.get('mpg_token');
 if (tk) q.push('t=' + encodeURIComponent(tk));
+  if (/[?&]r=1/.test(location.search)) q.push('r=1');
 var tt = 0;
 function avviso(t) {
   var x = document.getElementById('avviso');
